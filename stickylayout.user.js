@@ -7,7 +7,7 @@
 // @match        https://www.jeuxvideo.com/forums/*
 // @grant        none
 // ==/UserScript==
-
+// ==/UserScript==// ==/UserScript==// ==/UserScript==// ==/UserScript==// ==/UserScript==
 (function () {
     'use strict';
 
