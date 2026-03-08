@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         StickyLayout
 // @namespace    https://github.com/monkheyonepiece/StickyLayout
-// @version      1.0.0
+// @version      1.0.1
 // @description  Colle le Layout Sous-Forums et Info pendant le scroll de la page
 // @author       monkheyonepiece
 // @match        https://www.jeuxvideo.com/forums/*
