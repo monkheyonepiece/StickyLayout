@@ -3,7 +3,7 @@
 // @namespace    https://github.com/monkheyonepiece/StickyLayout
 // @updateURL    https://raw.githubusercontent.com/monkheyonepiece/StickyLayout/main/stickylayout.user.js
 // @downloadURL  https://raw.githubusercontent.com/monkheyonepiece/StickyLayout/main/stickylayout.user.js
-// @version      1.0.2
+// @version      1.0.0
 // @description  Colle le Layout Sous-Forums et Info pendant le scroll de la page
 // @author       monkheyonepiece
 // @match        https://www.jeuxvideo.com/forums/*
