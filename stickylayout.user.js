@@ -66,5 +66,5 @@
     window.addEventListener('resize', update, { passive: true });
     update();
 
-    console.log('[JVC Sticky v11.4] OK');
+    console.log('[JVC Sticky v1.1.0] OK');
 })();
