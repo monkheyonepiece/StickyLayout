@@ -3,7 +3,7 @@
 // @namespace    https://github.com/monkheyonepiece/StickyLayout
 // @updateURL    https://raw.githubusercontent.com/monkheyonepiece/StickyLayout/main/stickylayout.user.js
 // @downloadURL  https://raw.githubusercontent.com/monkheyonepiece/StickyLayout/main/stickylayout.user.js
-// @version      1.0.0
+// @version      1.1.0
 // @description  Colle le Layout Sous-Forums et Info pendant le scroll de la page
 // @author       monkheyonepiece
 // @match        https://www.jeuxvideo.com/forums/*
@@ -14,7 +14,7 @@
     'use strict';
 
     const SIDEBAR_SEL = '.layout__contentAside';
-    const FOOTER_SEL  = '.layout__videoFooter, #jv-footer, .layout__footer';
+    const BOTTOM_SEL  = '.layout__contentMain';
     const HEADER_SEL  = '.js-header, .header--affix, header.header';
 
     const style = document.createElement('style');
@@ -42,18 +42,18 @@
     `;
     document.head.appendChild(style);
 
-    const sidebar  = document.querySelector(SIDEBAR_SEL);
-    const footer   = document.querySelector(FOOTER_SEL);
-    const headerEl = document.querySelector(HEADER_SEL);
+    const sidebar   = document.querySelector(SIDEBAR_SEL);
+    const headerEl  = document.querySelector(HEADER_SEL);
+    const bottomEl  = document.querySelector(BOTTOM_SEL);
 
     if (!sidebar) return;
 
     function update() {
-        const headerBottom = headerEl ? headerEl.getBoundingClientRect().bottom : 80;
-        const footerTop    = footer   ? footer.getBoundingClientRect().top      : window.innerHeight;
-        const top          = headerBottom + 8;
+        const headerBottom = headerEl  ? headerEl.getBoundingClientRect().bottom  : 80;
+        const footerTop    = bottomEl  ? bottomEl.getBoundingClientRect().bottom  : window.innerHeight;
 
-        // On prend le minimum entre : espace jusqu'au footer ET espace jusqu'en bas du viewport
+        const top = headerBottom + 8;
+
         const maxByFooter   = footerTop - top - 8;
         const maxByViewport = window.innerHeight - top - 8;
         const maxH          = Math.max(0, Math.min(maxByFooter, maxByViewport));
@@ -66,5 +66,5 @@
     window.addEventListener('resize', update, { passive: true });
     update();
 
-    console.log('[JVC Sticky v11.3] OK');
+    console.log('[JVC Sticky v11.4] OK');
 })();
